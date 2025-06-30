@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义海洋主题样式 */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* 海洋按钮样式 */
+  .btn-ocean {
+    @apply bg-ocean-500 hover:bg-ocean-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-marine {
+    @apply bg-marine-500 hover:bg-marine-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  /* 卡片样式 */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  /* 面板样式 */
+  .panel {
+    @apply bg-white rounded-lg shadow-lg border border-gray-200 p-4;
+  }
+
+  /* 导航按钮样式 */
+  .nav-button {
+    @apply flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-left w-full;
+  }
+  
+  .nav-button-active {
+    @apply bg-ocean-50 text-ocean-700 border border-ocean-200;
+  }
+  
+  .nav-button-inactive {
+    @apply text-gray-600 hover:bg-gray-50;
+  }
+
+  /* 输入框样式 */
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-transparent;
+  }
+
+  /* 滑块样式 */
+  .slider {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-ocean-500 rounded-full cursor-pointer;
+  }
+}
+
+@layer utilities {
+  /* 自定义工具类 */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .glass-effect {
+    @apply bg-white bg-opacity-90 backdrop-blur-sm;
+  }
+}
+
+/* ArcGIS地图容器样式 */
+.esri-view {
+  @apply rounded-lg overflow-hidden;
+}
+
+/* 加载动画 */
+.loading-spinner {
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #0ea5e9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}

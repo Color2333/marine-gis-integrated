@@ -1,0 +1,407 @@
+/* src/styles/themes.css */
+
+/* CSS变量定义 */
+:root {
+  /* 默认浅色主题 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --error-hover: #dc2626;
+  --purple-color: #8b5cf6;
+  --purple-hover: #7c3aed;
+  --gray-color: #6b7280;
+  --gray-hover: #4b5563;
+}
+
+/* 主题类 */
+.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --error-hover: #dc2626;
+  --purple-color: #8b5cf6;
+  --purple-hover: #7c3aed;
+  --gray-color: #6b7280;
+  --gray-hover: #4b5563;
+}
+
+.theme-dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #374151;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #9ca3af;
+  --border-color: #404040;
+  --border-light: #374151;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --error-hover: #dc2626;
+  --purple-color: #8b5cf6;
+  --purple-hover: #7c3aed;
+  --gray-color: #9ca3af;
+  --gray-hover: #6b7280;
+}
+
+.theme-ocean {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --border-light: #475569;
+  --accent-color: #06b6d4;
+  --accent-hover: #0891b2;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --error-hover: #dc2626;
+  --purple-color: #8b5cf6;
+  --purple-hover: #7c3aed;
+  --gray-color: #64748b;
+  --gray-hover: #475569;
+}
+
+/* 全局样式 */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 主题化组件样式 */
+.themed-bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.themed-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.themed-text-primary {
+  color: var(--text-primary);
+}
+
+.themed-text-secondary {
+  color: var(--text-secondary);
+}
+
+.themed-border {
+  border-color: var(--border-color);
+}
+
+.themed-accent {
+  color: var(--accent-color);
+}
+
+.themed-accent-bg {
+  background-color: var(--accent-color);
+}
+
+/* 暗色主题下的特殊样式 */
+.theme-dark .bg-white {
+  background-color: var(--bg-secondary);
+}
+
+.theme-dark .text-gray-900,
+.theme-dark .text-gray-800,
+.theme-dark .text-gray-700 {
+  color: var(--text-primary);
+}
+
+.theme-dark .text-gray-600,
+.theme-dark .text-gray-500 {
+  color: var(--text-secondary);
+}
+
+.theme-dark .border-gray-200,
+.theme-dark .border-gray-300 {
+  border-color: var(--border-color);
+}
+
+.theme-dark .bg-gray-50,
+.theme-dark .bg-gray-100 {
+  background-color: var(--bg-secondary);
+}
+
+/* 暗色主题下的表单元素 */
+.theme-dark select,
+.theme-dark input[type="text"],
+.theme-dark input[type="number"],
+.theme-dark input[type="range"],
+.theme-dark textarea {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.theme-dark select:focus,
+.theme-dark input:focus,
+.theme-dark textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.theme-dark option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* 海洋主题下的特殊样式 */
+.theme-ocean .bg-white {
+  background-color: var(--bg-secondary);
+}
+
+.theme-ocean .text-gray-900,
+.theme-ocean .text-gray-800,
+.theme-ocean .text-gray-700 {
+  color: var(--text-primary);
+}
+
+.theme-ocean .text-gray-600,
+.theme-ocean .text-gray-500 {
+  color: var(--text-secondary);
+}
+
+.theme-ocean .border-gray-200,
+.theme-ocean .border-gray-300 {
+  border-color: var(--border-color);
+}
+
+.theme-ocean .bg-gray-50,
+.theme-ocean .bg-gray-100 {
+  background-color: var(--bg-secondary);
+}
+
+.theme-ocean .bg-blue-600,
+.theme-ocean .bg-blue-500 {
+  background-color: var(--accent-color);
+}
+
+/* 海洋主题下的表单元素 */
+.theme-ocean select,
+.theme-ocean input[type="text"],
+.theme-ocean input[type="number"],
+.theme-ocean input[type="range"],
+.theme-ocean textarea {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.theme-ocean select:focus,
+.theme-ocean input:focus,
+.theme-ocean textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.theme-ocean option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* 主题化按钮样式 */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--gray-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-hover);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-error {
+  background-color: var(--error-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-error:hover {
+  background-color: var(--error-hover);
+}
+
+.btn-purple {
+  background-color: var(--purple-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-hover);
+}
+
+.btn-ocean {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-ocean:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-marine {
+  background-color: var(--success-color);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-marine:hover {
+  background-color: #059669;
+}
+
+/* 主题化面板样式 */
+.panel-primary {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.panel-secondary {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.panel-tertiary {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.card-content {
+  color: var(--text-secondary);
+}
+
+/* 主题化表单元素 */
+.themed-select,
+.themed-input,
+.themed-textarea {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.themed-select:focus,
+.themed-input:focus,
+.themed-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.themed-select option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 主题化复选框和单选按钮 */
+.themed-checkbox,
+.themed-radio {
+  accent-color: var(--accent-color);
+}
+
+/* 主题化滑块 */
+.themed-range {
+  accent-color: var(--accent-color);
+}
+
+.themed-range::-webkit-slider-track {
+  background-color: var(--border-color);
+}
+
+.themed-range::-webkit-slider-thumb {
+  background-color: var(--accent-color);
+}
+
+.themed-range::-moz-range-track {
+  background-color: var(--border-color);
+}
+
+.themed-range::-moz-range-thumb {
+  background-color: var(--accent-color);
+  border: none;
+}

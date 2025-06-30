@@ -152,7 +152,7 @@ src/
 
 ## 🤝 开发团队
 
-- **开发者**: 同济大学海洋与地球科学学院
+- **开发者**: Color2333
 - **技术支持**: React + ArcGIS + AI 集成技术栈
 - **联系邮箱**: 2252137@tongji.edu.cn
 
@@ -369,7 +369,7 @@ graph TB
 1. **克隆项目**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Color2333/marine-gis-integrated
 cd marine-gis-integrated
 ```
 
@@ -1285,7 +1285,7 @@ class ErrorBoundary extends React.Component {
 
 ```bash
 # 克隆项目
-git clone <repository-url>
+git clone https://github.com/Color2333/marine-gis-integrated
 cd marine-gis-integrated
 
 # 安装依赖
@@ -1661,7 +1661,7 @@ function reportWebVitals({ id, name, value }: any) {
 
 ### 📝 代码贡献规范
 
-- 遵循现有代码风格和 ESLint 配置
+- 遵循现有代码风格和 ESLint 配置 s
 - 为新功能编写单元测试
 - 更新相关文档
 - 确保所有测试通过
